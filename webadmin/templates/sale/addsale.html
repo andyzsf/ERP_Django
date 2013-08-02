@@ -1,0 +1,73 @@
+<div id="add-sale-dialog" style="display:none">
+<form id="add-sale-form" method="post" class="mws-form" action='{% url addsale %}'>
+    {% csrf_token %}
+        <div class="mws-form-inline">
+
+
+            <input type="text" name='custid' id='addcustid' style="display:none;width:220px;"/>
+            <div class="mws-form-row">
+                <label class="mws-form-label">客户公司: </label>
+                <div class="mws-form-item large">
+                    <input type="text" name='custcompany' id='addcustcompany' style="width:220px;"/>
+                    <a href='#' class='btn' id='btnaddcustomer'
+                        style='width:2px;height:25px;'><i>...</i></a> 
+                </div>
+            </div>
+
+
+            <input type="text" name='productid' id='addproductid' style="display:none;width:220px;"/>
+            <div class="mws-form-row">
+                <label class="mws-form-label">产品名称: </label>
+                <div class="mws-form-item large">
+                    <input type="text" id='addproductname' name='productname' style="width:220px;"/>
+                    <a href='#' class='btn' id='btnaddproduct'
+                        style='width:2px;height:25px'><i>...</i></a> 
+                </div>
+            </div>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">产品型号: </label>
+                <div class="mws-form-item large">
+                    <input type="text" id='addproductspec' name='productspec' style="width:220px;"/>
+                </div>
+            </div>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">数量: </label>
+                <div class="mws-form-item large">
+                    <input type="text" id='quantity' name='quantity' style="width:50px;"/>
+                </div>
+            </div>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">单价: </label>
+                <div class="mws-form-item large">
+                    <input type="text" id='unitprice' name='unitprice' style="width:50px;"/>
+                </div>
+            </div>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">折扣: </label>
+                <div class="mws-form-item large">
+                    <input type="text" id='discount' name='discount' style="width:50px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+
+            
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">备注信息:</label>
+                <div class="mws-form-item large">
+                    <textarea id='editmessage' name="message" rows="3" style='width:320px; height:100px' warp="virtual" ></textarea>
+                    <div class="error-messages">
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </form>
+</div>

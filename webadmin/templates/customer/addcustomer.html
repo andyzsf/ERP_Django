@@ -1,0 +1,103 @@
+<div id="add-customer-dialog" style="display:none">
+<form id="add-customer-form" method="post" class="mws-form" action='{% url addcustomer %}'>
+    {% csrf_token %}
+        <div class="mws-form-inline">
+
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">公司名称：</label>
+                <div class="mws-form-item large">
+                    <input type="text" name='custcompany' id='addcustcompany' style="width:220px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">公司地址:</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='addaddress' name='address' style="width:240px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">联系人:</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='addlinkman' name='linkman' style="width:100px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+
+
+
+            
+            <div class="mws-form-row">
+                <label class="mws-form-label">城市:</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='addcity' name='city' style="width:100px;"/>
+                </div>
+
+            </div>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">地区:</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='addregion' name='region' style="width:100px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">邮编:</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='addzipcode' name='zipcode' style="width:100px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">电话:</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='addtel' name='tel' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">传真:</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='addfax' name='fax' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">公司网页:</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='addhomepage' name='homepage' style="width:240px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">备注信息：</label>
+                <div class="mws-form-item large">
+                    <textarea id='addmessage' name="message" rows="3" style='width:240px; height:80px' warp="virtual" ></textarea>
+                    <div class="error-messages">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

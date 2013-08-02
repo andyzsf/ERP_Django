@@ -1,0 +1,50 @@
+<div id="add-product-dialog" style="display:none" >
+<form id="add-product-form" method="post" class="mws-form" action='{% url addproduct %}'>
+    {% csrf_token %}
+    
+       <div class="mws-form-inline">
+
+
+           
+            <input type="text" name='id' id='addproductid' style="display:none; width:120px;"/>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">产品名称:</label>
+                <div class="mws-form-item large">
+                    <input type="text" name='productname' id='addproductname' style="width:200px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">型号规格:</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='addproductspec' name='productspec' style="width:200px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">单位:</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='addproductunit' name='unit' style="width:60px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+
+
+            <div class="mws-form-row">
+                <label class="mws-form-label">备注信息:</label>
+                <div class="mws-form-item large">
+                    <textarea id='addmessage' name="message" rows="3" style='width:200px; height:100px' warp="virtual" ></textarea>
+                    <div class="error-messages">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

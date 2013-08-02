@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
+{% include "include.html" %}
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="/static/plugins/datatables/extra/TableTools.css" media="screen"/>
+{% endblock %}
+<body>
+
+    {% include "header.html" %}
+    <!-- Start Main Wrapper -->
+    <div id="mws-wrapper">
+    
+        {% include "leftmenu.html" %}
+        <!-- Main Container Start -->
+        <div id="mws-container" class="clearfix">
+            <br/>
+            <!-- Inner Container Start -->
+            <div class="container">
+                
+                {% if success %}
+                    <div id='success' class="mws-form-message success">
+                        您已经{{successinfo}}成功!
+                    </div>
+                {% endif %}
+                <div class="mws-panel grid_8" style="margin-bottom:0px">
+                    <div class="mws-panel-header">
+                        <span><i class="icon-magic"></i>供应商理</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+
+                        <table class="mws-datatable-fn mws-table" name="feeders" id="feeders" style="text-align:center;">
+                            <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>公司名称</th>
+                                    <th>联系人</th>
+                                    <th>公司地址</th>
+                                    <th>城市</th>
+                                    <th>区域</th>
+                                    <th>邮编</th>
+                                    <th>电话</th>
+                                    <th>传真</th>
+                                    <th>公司网页</th>
+                                    <th>备注</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            {% include "feeder/addfeeder.html" %}
+            {% include "feeder/editfeeder.html" %}
+            {% include "feeder/deletefeeder.html" %}
+            {% include "feeder/select.html" %}
+
+                <!-- Panels End -->
+            </div>
+            <!-- Inner Container End -->
+                       
+            <!-- Footer -->
+            <div id="mws-footer">
+                Made by cyh. All Rights Reserved.
+            </div>
+            
+        </div>
+        <!-- Main Container End -->
+        
+    </div>
+    
+    {% include "footer.html" %}
+    <script type="text/javascript" src="/static/plugins/datatables/extra/TableTools.js"></script>
+    <script type="text/javascript" src="/static/plugins/datatables/extra/ZeroClipboard.js"></script>
+</body>
+</html>
